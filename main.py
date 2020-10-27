@@ -2,6 +2,8 @@
 from constructs import Construct
 from cdktf import App, TerraformStack
 
+from prj_cdktf_python.prj_cdktf_python_stack import PrjCdktfPythonStack
+
 
 class MyStack(TerraformStack):
     def __init__(self, scope: Construct, ns: str):
@@ -11,6 +13,7 @@ class MyStack(TerraformStack):
 
 
 app = App()
-MyStack(app, "prj-cdktf_python")
+#MyStack(app, "prj-cdktf_python")
+PrjCdktfPythonStack(app, "prj-cdktf_python")
 
 app.synth()
